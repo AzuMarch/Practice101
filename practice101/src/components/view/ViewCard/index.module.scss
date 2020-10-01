@@ -1,0 +1,60 @@
+@import 'variables';
+
+.viewBox {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+
+   img {
+       padding: 2rem;
+       width: 400px;
+       object-fit: contain;
+       margin-right: 5rem;
+       box-shadow: 0 0 40px 0 black;
+   }
+
+   .imageCarousel {
+       margin-top: 1rem;
+       width: 400px;
+       display: flex;
+       justify-content: space-evenly;
+
+        img {
+            padding: 0.1rem;
+            width: 100px;
+            margin: 0;
+            object-fit: contain;
+            box-shadow: 0 0 40px 0 black;
+        }
+   }
+
+   .infoContainer {
+
+        h5 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .priceAndBuy {
+            border: 1px solid $primary;
+            padding: $rem;
+            display: flex;
+            font-size: 20px;
+
+            .viewPrice {
+                margin: 0 0.5rem 0 0.5rem;
+                padding: 0.2rem;
+            }
+
+            .viewBtn {
+                font-size: 16px;
+                border: none;
+                background: $secondary;
+                color: $primary;
+            }
+        }
+   }
+}

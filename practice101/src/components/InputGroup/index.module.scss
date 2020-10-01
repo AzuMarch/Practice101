@@ -1,0 +1,13 @@
+@import 'variables';
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+
+    label {
+        color: $primary;
+        display: inline-block;
+        text-align: left;
+    }
+    
+}

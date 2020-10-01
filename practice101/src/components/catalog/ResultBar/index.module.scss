@@ -1,0 +1,14 @@
+@import 'variables';
+
+.resultBar {
+    display: block;
+    grid-area: resultBarRight;
+
+    h2 {
+        color: $tertiary;
+    }
+
+    .selectTitle {
+        margin-right: 10px;
+    }
+}

@@ -1,0 +1,46 @@
+@import 'variables';
+
+.ItemCard {
+    margin: $rem;
+    display: inline-block;
+    text-align: center;
+    background: $secondary;
+    color: $primary;
+
+    img {
+        padding: $rem;
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
+    }
+
+    div {
+        margin-top: 0.5rem;
+    }
+
+    h5 {
+        font-size: 18px;
+        margin: 8px;
+    }
+
+    .viewLink {
+        text-decoration: none;
+        color: $primary;
+        display: block;
+    }
+
+    .CardBtn {
+        width: 100%;
+        border: none;
+        padding: 0.5rem;
+        background: $tertiary;
+        color: $primary;
+        transition: 0.2s;
+    }
+
+    .CardBtn:hover {
+        background: $primary;
+        color: $tertiary;
+        transition: 0.2s;
+    }
+}

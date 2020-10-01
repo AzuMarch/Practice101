@@ -1,0 +1,13 @@
+@import 'variables';
+
+.LinkGroup {
+   margin-right: 10px;
+   color: $primary;
+   text-decoration: none;
+   transition: 0.2s;
+   
+   .LinkGroup:hover {
+       color: $tertiary;
+       transition: 0.2s;
+   }
+}

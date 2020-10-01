@@ -1,0 +1,18 @@
+@import 'variables';
+
+.cartLayout {
+    background: $tertiary;
+    height: 100vh;
+    color: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .backBtn {
+        color: $primary;
+        text-decoration: none;
+        margin-top: 1rem;
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,17 @@
+@import 'variables';
+
+.storeLink {
+    padding: 0 144px 0 144px;
+    background: $tertiary;
+    color: $primary;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        font-size: 32px;
+        text-decoration: none;
+        color: $primary;
+    }
+}

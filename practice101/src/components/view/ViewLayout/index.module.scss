@@ -1,0 +1,10 @@
+@import 'variables';
+
+.viewLayout {
+    background: $tertiary;
+    height: 100vh;
+    color: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

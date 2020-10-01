@@ -1,0 +1,23 @@
+@import 'variables';
+
+.registerForm {
+    background: $secondary;
+    padding: 1rem;
+    width: 280px;
+    height: fit-content;
+
+    input {
+        border: none;
+        padding: 0.4rem;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+        background-color: $tertiary;
+        margin-top: 0.5rem;
+        color: $primary;
+        padding: 0.3rem;
+        border: none;
+    }
+}

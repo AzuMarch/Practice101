@@ -1,0 +1,13 @@
+@import 'variables';
+
+.GridLayout {
+    width: 1024px;
+    display: grid;
+    padding: 1rem 1rem 2rem;
+    margin: 0 auto;
+    grid-template:
+    "resultBar resultBarRight"
+    "filterSidebar itemGrid" 
+    / 220px auto;
+}
+

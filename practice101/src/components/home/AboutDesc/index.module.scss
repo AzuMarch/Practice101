@@ -1,0 +1,15 @@
+@import 'variables';
+
+.AboutDesc {
+    padding: 0 144px 0 144px;
+    background: $secondary;
+    color: $primary;
+    display: flex;
+    flex-direction: column;
+    height: 240px;
+
+    h2 {
+        font-size: 40px;
+    }
+}
+

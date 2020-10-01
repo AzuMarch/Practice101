@@ -1,0 +1,7 @@
+@import 'variables';
+
+.ItemGrid {
+    display: block;
+    grid-area: itemGrid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
