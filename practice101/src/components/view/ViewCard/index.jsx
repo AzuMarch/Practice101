@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './index.module.scss';
 
 const ViewBox = ({data}) => {
+    console.log({data});
     return (
         <div className={styles.viewBox}>
             <div className={styles.imageContainer}>

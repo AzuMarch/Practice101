@@ -5,33 +5,10 @@ import ItemGrid from 'components/catalog/itemGrid';
 import ResultBar from 'components/catalog/ResultBar';
 import InputGroup from 'components/InputGroup';
 import CheckboxGroup from '../components/CheckboxGroup';
+import { connect } from 'react-redux';
+import { selectItemsInPriceRange } from 'store/selectors';
+import uniqid from 'uniqid';
 
-const initItems = [
-    {
-        id: 0,
-        title: "Shoe",
-        price: 9.50,
-        type: "Formal",
-        description: "It's just one shoe Idk",
-        img: "http://www.clker.com/cliparts/d/3/6/5/13579371752084257714shoe-hi.png"
-    },
-    {
-        id: 1,
-        title: "Shoe2",
-        price: 6.90,
-        type: "Sport",
-        description: "It's another singular shoe",
-        img: "https://freepngimg.com/download/adidas_shoes/5-2-adidas-shoes-transparent.png"
-    },
-    {
-        id: 2,
-        title: "Shoe3",
-        price: 4.40,
-        type: "Casual",
-        description: "A third shoe of some sort",
-        img: "https://pngriver.com/wp-content/uploads/2018/02/download-denim-snikers-shoes-PNG-transparent-images-transparent-backgrounds-PNGRIVER-COM-sneakers-2768263_960_720.png"
-    }
-];
 
 const sortFunctions = {
     'a-z': (a, b) => a.title.localeCompare(b.title),
@@ -69,7 +46,7 @@ const initFilters = [
     }
 ]
 
-const Catalog = () => {
+const Catalog = ({initItems}) => {
     const [minValue, setMinValue] = useState(0);
     const [maxValue, setMaxValue] = useState(50);
     const [filteredItems, setFilteredItems] = useState(initItems);
@@ -103,7 +80,7 @@ const Catalog = () => {
 
     const filtersView = filters.map(filter => {
         const options = filter.options.map(option =>
-            <CheckboxGroup title={option.name} onChange={(title) => changeFilterOptions(filter.name, title)} checked={option.checked} />
+            <CheckboxGroup title={option.name} onChange={(title) => changeFilterOptions(filter.name, title)} checked={option.checked} key={uniqid()}/>
         )
         return (
             <>
@@ -127,4 +104,9 @@ const Catalog = () => {
     )
 }
 
-export default Catalog;
+const mapStateToProps = (state) => ({
+    initItems: state.catalog.items,
+    filteredItems: (min, max) => selectItemsInPriceRange(state, min, max)
+});
+
+export default connect(mapStateToProps)(Catalog);

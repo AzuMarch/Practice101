@@ -1,22 +1,29 @@
 import React from 'react';
 import ViewLayout from 'components/view/ViewLayout';
 import ViewCard from 'components/view/ViewCard';
+import { useParams } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { selectItemsById } from 'store/selectors.js';
+import { addToCart } from 'store/actionCreators.js';
 
-const data = {
-        id: 0,
-        title: "Shoe",
-        price: 9.50,
-        type: "Formal",
-        description: "It's just one shoe Idk",
-        img: "http://www.clker.com/cliparts/d/3/6/5/13579371752084257714shoe-hi.png"
-}
+const View = ({selectItemsById, addToCart}) => {
+    let {itemId} = useParams();
 
-const View = () => {
+    //console.log(selectItemsById(Number(itemId)));
+    //const {id, title, price, description, img} = selectItemsById(Number(itemId));
     return (
         <ViewLayout>
-            <ViewCard data={data} />
+            <ViewCard data={selectItemsById(Number(itemId))} />
         </ViewLayout>
     )
 }
 
-export default View;
+const mapStateToProps = (store) =>({
+    selectItemsById: id => selectItemsById(store, id)
+})
+
+const mapDispatchToProps = dispatch => ({
+    addToCart: (id) => dispatch(addToCart(id))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(View);

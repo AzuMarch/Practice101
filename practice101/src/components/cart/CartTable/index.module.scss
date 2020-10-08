@@ -1,0 +1,33 @@
+@import 'variables';
+
+.tableCon {
+    .cartBtn {
+        background: none;
+        text-decoration: none;
+        color: $primary;
+        border: solid 1px $secondary;
+        height: 30px;
+        font-size: 15px;
+        margin: 0.2rem;
+        padding: 0.2rem;
+    }
+}
+
+.table {
+    width:1024px;
+
+    .headRow {
+        background: $secondary;
+
+    }
+
+    .cartItem{
+        font-size: 18px;
+        background: $secondary;
+        display: flex;
+        align-items: center;
+        width: 1024px;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+}

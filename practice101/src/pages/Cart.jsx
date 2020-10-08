@@ -1,13 +1,19 @@
 import React from 'react';
+import CartTable from 'components/cart/CartTable';
 import CartLayout from 'components/cart/CartLayout';
-import CartList from 'components/cart/CartList';
+import { connect } from 'react-redux';
 
-const Cart = () => {
+const Cart = ({initItems}) => {
+
     return (
         <CartLayout>
-            <CartList />
+            <CartTable items={initItems}/>
         </CartLayout>
     )
 }
 
-export default Cart;
+const mapStateToProps = (state) => ({
+    initItems: state.cart.items,
+});
+
+export default connect(mapStateToProps)(Cart);

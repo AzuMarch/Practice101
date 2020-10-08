@@ -4,8 +4,8 @@ import {
     Link
 } from 'react-router-dom';
 import logo from 'assets/navlogo.png';
-import { Icon } from 'react-icons-kit'
-import {shoppingCart} from 'react-icons-kit/fa/shoppingCart'
+import { Icon } from 'react-icons-kit';
+import {shoppingCart} from 'react-icons-kit/fa/shoppingCart';
 
 const links = [
     {

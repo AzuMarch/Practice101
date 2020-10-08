@@ -10,7 +10,7 @@ const LoginForm = () => {
         <form className={styles.loginForm}>
             <InputGroup title="Email:" type="email" initValue='' onChange='' />
             <InputGroup title="Password:" type="text" initValue='' onChange='' />
-            <button>Sign in</button>
+            <button type="submit">Sign in</button>
             <p>Don't have an account? <Link to="/register">Register here</Link></p>
         </form>
     )

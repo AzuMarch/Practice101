@@ -32,7 +32,7 @@ const App = () => {
           <Route path="/register">
             <Register />
           </Route>
-          <Route path="/view">
+          <Route path="/view/:itemId">
             <View />
           </Route>
           <Route path="/cart">
