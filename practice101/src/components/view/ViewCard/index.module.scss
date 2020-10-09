@@ -10,7 +10,6 @@
        width: 400px;
        object-fit: contain;
        margin-right: 5rem;
-       box-shadow: 0 0 40px 0 black;
    }
 
    .imageCarousel {
@@ -18,19 +17,21 @@
        width: 400px;
        display: flex;
        justify-content: space-evenly;
+       padding: 0.2rem;
 
         img {
             padding: 0.1rem;
-            width: 100px;
+            width: 90px;
             margin: 0;
             object-fit: contain;
-            box-shadow: 0 0 40px 0 black;
+            border: 1px solid $secondary;
         }
    }
 
    .infoContainer {
 
         h5 {
+            font-style: oblique;
             font-size: 36px;
         }
 
@@ -39,8 +40,8 @@
         }
 
         .priceAndBuy {
-            border: 1px solid $primary;
-            padding: $rem;
+            border: 1px solid $secondary;
+            padding: 0.5rem;
             display: flex;
             font-size: 20px;
 

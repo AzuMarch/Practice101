@@ -14,11 +14,19 @@
         object-fit: contain;
     }
 
+    @media only screen and (max-width: 900px) {
+        img {
+            width: 140px;
+            height: 140px;
+        }
+    }
+
     div {
         margin-top: 0.5rem;
     }
 
     h5 {
+        font-style: oblique;
         font-size: 18px;
         margin: 8px;
     }
@@ -29,9 +37,13 @@
         display: block;
     }
 
+    .viewLink :hover {
+        background-color: $tertiary;
+    }
+
     .CardBtn {
+        border: 1px solid $secondary;
         width: 100%;
-        border: none;
         padding: 0.5rem;
         background: $tertiary;
         color: $primary;

@@ -1,0 +1,17 @@
+@import 'variables';
+
+.tableRow :last-child {
+    text-align: right;
+
+    i {
+        transition: 0.2s;
+    }
+
+    i :hover {
+        color: crimson;
+    }
+
+    span {
+        margin-right: 10px;
+    }
+}

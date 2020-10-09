@@ -1,12 +1,15 @@
 @import 'variables';
 
 .Navbar {
+    z-index: 5;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: $secondary;
     height: 60px;
     padding: 5px;
+    position: fixed;
+    width: 100%;
 
     .navLeft {
         display: flex;
@@ -17,17 +20,30 @@
             list-style: none;
     
             .navLink {
+                font-style: oblique;
                 color: $primary;
                 margin-right: 1rem;
                 text-decoration: none;
             }
+
+            .navLink :hover {
+                color: $tertiary;
+            }
         }
     
-        .NavLogo {
-    
-            img {
-                width: 40px;
-                object-fit: contain;
+        .logoText {
+            font-style: oblique;
+            font-weight: 500;
+            height: 50px;
+            width: 130px;
+            background: $primary;
+            text-align: center;
+
+            p {
+                margin: 0;
+                margin-top: 0.5rem;
+                color: $tertiary;
+                font-size: 24px;
             }
         }
     }
@@ -38,13 +54,20 @@
         color: $primary;
 
         .itemCount {
+            font-style: oblique;
             background: $tertiary;
+            border-radius: 6px;
             margin-left: 0.6rem;
             padding: 0.05rem 0.6rem 0.05rem 0.6rem;
         }
 
-        a   {
+        a {
+            transition: 0.2s;
             color: $primary;
+        }
+
+        a :hover {
+            color: $tertiary;
         }
     }
 }

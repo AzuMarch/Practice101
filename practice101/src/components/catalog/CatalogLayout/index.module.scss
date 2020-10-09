@@ -1,13 +1,25 @@
 @import 'variables';
 
-.GridLayout {
-    width: 1024px;
-    display: grid;
-    padding: 1rem 1rem 2rem;
-    margin: 0 auto;
-    grid-template:
-    "resultBar resultBarRight"
-    "filterSidebar itemGrid" 
-    / 220px auto;
+
+.CatalogContainer {
+    background: $tertiary;
+    height: 120vh;
+
+    .GridLayout {
+        width: 1024px;
+        display: grid;
+        padding: 1rem 1rem 2rem;
+        margin: 0 auto;
+        grid-template:
+        "resultBar resultBarRight"
+        "filterSidebar itemGrid" 
+        / 220px auto;
+    }
+
+    @media only screen and (max-width: 800px) {
+        .GridLayout {
+            width: 100vw;
+        }
+    }
 }
 

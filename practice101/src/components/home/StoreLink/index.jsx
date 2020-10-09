@@ -8,7 +8,7 @@ const StoreLink = () => {
 
     return (
         <div className={styles.storeLink}>
-            <Link to="/catalog">Check out our products</Link>
+            <Link to="/catalog">Check out our products here</Link>
         </div>
     )
 }

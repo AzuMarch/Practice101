@@ -8,12 +8,12 @@ import { Icon } from 'react-icons-kit';
 
 const BasketItem = ({title, price, id, purchaseAmount, removeFromCart }) => {
     return (
-        <tr id={id}>
-            <td>{id}</td>
+        <tr id={id} className={styles.tableRow}>
             <td>{title}</td>
-            <td>{price}</td>
+            <td>{price} €</td>
             <td>{purchaseAmount}</td>
-            <td id={id} className={styles.remove} onClick={()=>removeFromCart(id)}><Icon size={30} icon={remove} /></td>
+            <td id={id} className={styles.remove} onClick={()=>removeFromCart(id)}><span>Remove item</span>
+            <Icon size={30} icon={remove} /></td>
         </tr>
     )
 }

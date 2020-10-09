@@ -3,9 +3,8 @@ import styles from './index.module.scss';
 import {
     Link
 } from 'react-router-dom';
-import logo from 'assets/navlogo.png';
 import { Icon } from 'react-icons-kit';
-import {shoppingCart} from 'react-icons-kit/fa/shoppingCart';
+import { shoppingCart } from 'react-icons-kit/fa/shoppingCart';
 
 const links = [
     {
@@ -25,15 +24,17 @@ const links = [
 const Navbar = () => {
     const LinksView = links.map(link =>
         <li key={link.title.toLowerCase()}>
-                <Link to={link.href} className={styles.navLink}>{link.title}</Link>        
+            <div className={styles.linkBackground}>
+                <Link to={link.href} className={styles.navLink}>{link.title}</Link>
+            </div>        
         </li>
     )
 
     return (
         <div className={styles.Navbar}>
             <div className={styles.navLeft}>
-                <div className={styles.NavLogo}>
-                    <img src={logo} alt="" />
+                <div className={styles.logoText}>
+                    <p>Islewalk</p>
                 </div>
                 <ul>
                     {LinksView}
